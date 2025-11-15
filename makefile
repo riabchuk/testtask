@@ -30,5 +30,5 @@ migrate:
 seed:
 	docker exec -it $(CONTAINER) php artisan db:seed --force
 
-setup: build up composer-install npm-install fix-permissions cache-clear migrate npm-build
+setup: build up composer-install npm-install fix-permissions migrate cache-clear  npm-build
 	@echo "✅ Laravel готовий до роботи"
