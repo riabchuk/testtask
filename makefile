@@ -25,7 +25,7 @@ cache-clear:
 	docker exec -it $(CONTAINER) php artisan optimize:clear
 
 migrate:
-        docker exec -it $(CONTAINER) sh -c "./docker/wait-for-mysql.sh db php artisan migrate --force"
+	docker exec -it $(CONTAINER) sh -c "./docker/wait-for-mysql.sh db php artisan migrate --force"
 
 seed:
 	docker exec -it $(CONTAINER) php artisan db:seed --force
