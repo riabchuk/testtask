@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "594622a7-aec4-41d0-885c-8fa87f6a2154",
+		"name": "testtask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6035989"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8090/api/company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"ТОВ Українська енергетична біржа v4\",\n\"edrpou\": \"37027819\",\n\"address\": \" 01001, Україна, м. Київ, вул. Хрещатик, 44\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/company",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/api/company Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"ТОВ Українська енергетична біржа v4\",\n\"edrpou\": \"37027819\",\n\"address\": \" 01001, Україна, м. Київ, вул. Хрещатик, 44\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/company",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"company"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
