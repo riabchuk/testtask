@@ -25,10 +25,13 @@ cache-clear:
 	docker exec -it $(CONTAINER) php artisan optimize:clear
 
 migrate:
-	docker exec -it $(CONTAINER) sh -c "sleep 10 && php artisan migrate --force"
+        docker exec -it $(CONTAINER) sh -c "./docker/wait-for-mysql.sh db php artisan migrate --force"
 
 seed:
 	docker exec -it $(CONTAINER) php artisan db:seed --force
 
 setup: build up composer-install npm-install fix-permissions migrate cache-clear  npm-build
+	@echo "✅ Laravel готовий до роботи"
+
+restart: down up composer-install npm-install fix-permissions migrate cache-clear  npm-build
 	@echo "✅ Laravel готовий до роботи"
